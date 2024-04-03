@@ -4,13 +4,13 @@ class Dimension {
     double dim2;
     
     //create constructor
-    dimension(double dim) {
+    Dimension(double dim) {
         dim1 = dim;
         dim2 = dim;
     }
     
     //constructor overloading
-    dimension (double dim1, double dim2) {
+    Dimension (double dim1, double dim2) {
         this.dim1 = dim1;
         this.dim2 = dim2;
     }
@@ -23,7 +23,7 @@ class Dimension {
 //square subclass of dimension superclass
 class Square extends Dimension {
  
-    square(double side) {
+    Square(double side) {
         //super keyword to call superclass constructor
         super(side,side);
     }
@@ -39,7 +39,7 @@ class Square extends Dimension {
 //rectangle subclass of dimension superclass
 class Rectangle extends Dimension {
 
-    rectangle(double length, double width) {
+    Rectangle(double length, double width) {
         super(length,width);
     }
     
@@ -54,7 +54,7 @@ class Rectangle extends Dimension {
 //triangle subclass of dimension superclass
 class Triangle extends Dimension {
 
-    triangle(double base, double height) {
+    Triangle(double base, double height) {
         super(base,height);
     }
     
@@ -70,9 +70,9 @@ class MethodOverriding {
     public static void main(String args[]) {
         
         //object of subclass
-        Square s = new square(5);
-        Rectangle r = new rectangle(4,5);
-        Triangle t = new triangle(2,5);
+        Square s = new Square(5);
+        Rectangle r = new Rectangle(4,5);
+        Triangle t = new Triangle(2,5);
         
         //calling superclass by reference 
         Dimension d;
